@@ -1,0 +1,13 @@
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="user_profile_id" value="{{ user_profile.id }}">
+    {{ formset.management_form }}
+    <table>
+        {{ formset.empty_form.username }} <!-- Display username field -->
+        {{ formset.empty_form.platform }} <!-- Display platform field -->
+    </table>
+    <button type="submit">Save</button>
+</form>
+
+
+  
